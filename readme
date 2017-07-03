@@ -1,0 +1,32 @@
+Are you want invoke a service runtime, are you have problem to use roslyn for invoke runtime a service.
+this libary help you to call a WCF service runtime and support all complex format,
+currently just support http services.
+currently just support WCF service.
+------------------
+EXAMPLE: Call Complex Method
+    ProxyClient proxyclient = new ProxyClient(
+              new Uri("http://localhost:8183/Service1.svc")); 
+    Dictionary<string, object> res;
+    string json;
+    Dictionary<string, object> input;
+
+    var method = proxyclient.GetMethod("ComplexInputTest");
+    var request = method.CreateRequest();
+
+    var argumant = method.GetArgumant("input1");
+    var temp = argumant.Type.CreateComplexInstance();
+    argumant.Type.GetPropery("Datetime").SetValue(temp, DateTime.Now);
+    argumant.Type.GetPropery("INTValue").SetValue(temp, 0);
+    argumant.Type.GetPropery("Value").SetValue(temp, false);
+    argumant.SetValue(request, temp);
+
+
+    argumant = method.GetArgumant("input2");
+    temp = argumant.Type.CreateComplexInstance();
+    argumant.Type.GetPropery("Name").SetValue(temp, "Hello");
+    argumant.SetValue(request, temp);
+
+    res = proxyclient.Call(request);
+    json = Newtonsoft.Json.JsonConvert.SerializeObject(res);
+    Console.WriteLine(json);
+    Console.WriteLine("----------------------------");
