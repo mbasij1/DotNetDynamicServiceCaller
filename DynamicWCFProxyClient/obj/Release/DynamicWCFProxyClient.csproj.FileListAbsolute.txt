@@ -1,0 +1,5 @@
+G:\Projects\StandAlone\DynamicWCFProxyClient\DynamicWCFProxyClient\bin\Release\DynamicWCFProxyClient.dll
+G:\Projects\StandAlone\DynamicWCFProxyClient\DynamicWCFProxyClient\bin\Release\DynamicWCFProxyClient.pdb
+G:\Projects\StandAlone\DynamicWCFProxyClient\DynamicWCFProxyClient\obj\Release\DynamicWCFProxyClient.csprojResolveAssemblyReference.cache
+G:\Projects\StandAlone\DynamicWCFProxyClient\DynamicWCFProxyClient\obj\Release\DynamicWCFProxyClient.dll
+G:\Projects\StandAlone\DynamicWCFProxyClient\DynamicWCFProxyClient\obj\Release\DynamicWCFProxyClient.pdb

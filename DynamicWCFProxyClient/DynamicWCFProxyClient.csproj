@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AF08A5D-FF40-40CF-BDAF-1322DF01D81B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicWCFProxyClient</RootNamespace>
+    <AssemblyName>DynamicWCFProxyClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Packet\HTTPResponse.cs" />
+    <Compile Include="Packet\PacketManager.cs" />
+    <Compile Include="Proxy\Models\address.cs" />
+    <Compile Include="Proxy\Models\attribute.cs" />
+    <Compile Include="Proxy\Models\bindingbinding.cs" />
+    <Compile Include="Proxy\Models\bindingoperation.cs" />
+    <Compile Include="Proxy\Models\bindingoperationinput.cs" />
+    <Compile Include="Proxy\Models\bindingoperationoutput.cs" />
+    <Compile Include="Proxy\Models\definitions.cs" />
+    <Compile Include="Proxy\Models\definitionsbinding.cs" />
+    <Compile Include="Proxy\Models\elementcomplexType.cs" />
+    <Compile Include="Proxy\Models\elementcomplexTypesequence.cs" />
+    <Compile Include="Proxy\Models\import.cs" />
+    <Compile Include="Proxy\Models\inputbody.cs" />
+    <Compile Include="Proxy\Models\maxInclusive.cs" />
+    <Compile Include="Proxy\Models\message.cs" />
+    <Compile Include="Proxy\Models\minInclusive.cs" />
+    <Compile Include="Proxy\Models\operationoperation.cs" />
+    <Compile Include="Proxy\Models\outputbody.cs" />
+    <Compile Include="Proxy\Models\part.cs" />
+    <Compile Include="Proxy\Models\pattern.cs" />
+    <Compile Include="Proxy\Models\port.cs" />
+    <Compile Include="Proxy\Models\portType.cs" />
+    <Compile Include="Proxy\Models\portTypeoperation.cs" />
+    <Compile Include="Proxy\Models\portTypeoperationinput.cs" />
+    <Compile Include="Proxy\Models\portTypeoperationoutput.cs" />
+    <Compile Include="Proxy\Models\restriction.cs" />
+    <Compile Include="Proxy\Models\schema.cs" />
+    <Compile Include="Proxy\Models\schemacomplexType.cs" />
+    <Compile Include="Proxy\Models\schemacomplexTypesequence.cs" />
+    <Compile Include="Proxy\Models\Element.cs" />
+    <Compile Include="Proxy\Models\schemaelement.cs" />
+    <Compile Include="Proxy\Models\service.cs" />
+    <Compile Include="Proxy\Models\simpleType.cs" />
+    <Compile Include="Proxy\Models\types.cs" />
+    <Compile Include="Proxy\NamespaceIgnorantXmlTextReader.cs" />
+    <Compile Include="Proxy\Structure\NameSpace.cs" />
+    <Compile Include="Proxy\Structure\Request.cs" />
+    <Compile Include="Proxy\Structure\ServiceStructure.cs" />
+    <Compile Include="Proxy\Structure\SMethod.cs" />
+    <Compile Include="Proxy\Structure\SMethodArgumant.cs" />
+    <Compile Include="Proxy\Structure\SType.cs" />
+    <Compile Include="Proxy\Structure\STypeSequence.cs" />
+    <Compile Include="Proxy\Structure\Variable.cs" />
+    <Compile Include="Proxy\discovery.cs" />
+    <Compile Include="Proxy\ProxyClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utility\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
